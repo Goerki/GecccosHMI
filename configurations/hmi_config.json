@@ -1,0 +1,140 @@
+{
+"logFile":"C:/Users/TGyoergy/Desktop/TGyoergy/Privat/Uni/GECCCOS/hmi.log",
+"loglevel":"ERROR,INFO,DEBUG",
+    "input":[
+        {
+        "filename":"energies",
+        "description":"All energies used in the calculations",
+        "content":[
+            {
+            "name":"energies",
+            "type":"list",
+            "identifyer":"",
+            "mandatory":"true",
+            "description":"a list of all used energies in the calculation"
+            }
+            ]
+        },
+        {
+        "filename":"GECCCOS.in",
+        "description":"All energies used in the calculations",
+        "content":[
+         ]
+        },
+        {
+        "filename":"poles.prototype",
+        "description":"All energies used in the calculations",
+        "content":[
+        {
+        "name":"number poles",
+        "type":"parameter",
+        "mandatory":"true",
+        "identifyer":"npoles",
+        "description":"the number of all used poles for the calculation"
+        },
+        {
+        "name":"number widths",
+        "type":"parameter",
+        "mandatory":"true",
+        "identifyer":"nwidths",
+        "description":"the number of all used widths for the calculation"
+        },
+         {
+            "name":"poles",
+            "type":"poles",
+            "mandatory":"true",
+            "identifyer":"E_pole",
+            "description":"the table that holds all information about the poles used",
+            "poleDimensionFile":"work/poledimensions.txt",
+            "poleStatesFile":"output/states.txt"
+            }
+            ]
+        }
+    ],
+    "output":[
+    {
+    "filename":"states.txt",
+    "description":"the states of the project",
+    "content":[
+    ]
+    }
+    ],
+    "work":[
+    {
+    "filename":"poledimensions.txt",
+    "description":"the dimensions of the poles are saved here",
+    "content":[
+        {
+            "name":"poledimensions",
+            "descriptions":"The map with all the pole dimensions per J total",
+            "type":"map",
+            "mandatory":"true",
+            "identifyer":"------",
+            "parameter":[
+                {
+                "name":"+1/2",
+                "description":"number width for J=+1/2",
+                "mandatory":"true",
+                "identifyer":"1/2+:"
+                },
+                {
+                "name":"-1/2",
+                "description":"number width for J=-1/2",
+                "mandatory":"true",
+                "identifyer":"1/2-:"
+                },
+                {
+                "name":"+3/2",
+                "description":"number width for J=+3/2",
+                "mandatory":"true",
+                "identifyer":"3/2+:"
+                },
+                {
+                "name":"-3/2",
+                "description":"number width for J=-3/2",
+                "mandatory":"true",
+                "identifyer":"3/2-:"
+                },
+                {
+                "name":"+5/2",
+                "description":"number width for J=+5/2",
+                "mandatory":"true",
+                "identifyer":"5/2+:"
+                },
+                {
+                "name":"-5/2",
+                "description":"number width for J=-5/2",
+                "mandatory":"true",
+                "identifyer":"5/2+:"
+                },
+                {
+                "name":"+7/2",
+                "description":"number width for J=+7/2",
+                "mandatory":"true",
+                "identifyer":"7/2+:"
+                },
+                {
+                "name":"-7/2",
+                "description":"number width for J=-7/2",
+                "mandatory":"true",
+                "identifyer":"7/2+:"
+                },
+                {
+                "name":"+9/2",
+                "description":"number width for J=+9/2",
+                "mandatory":"true",
+                "identifyer":"9/2+:"
+                },
+                {
+                "name":"-9/2",
+                "description":"number width for J=-9/2",
+                "mandatory":"true",
+                "identifyer":"9/2+:"
+                }
+            ]
+        }
+    ]
+    }
+
+    ]
+}
